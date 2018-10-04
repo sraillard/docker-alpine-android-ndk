@@ -1,3 +1,18 @@
+Using the prebuilt image
+========================
+
+The public Docker Hub repository is here: https://hub.docker.com/r/sraillard/alpine-android-ndk/
+
+The get the image:
+```
+docker pull sraillard/alpine-android-ndk:r18
+```
+
+To compile a project:
+```
+docker run --mount source=/path/to/ndk/project/,destination=/source,type=bind --workdir=/source sraillard/alpine-android-ndk:r18 ndk-build
+```
+
 Dependencies
 ============
 
