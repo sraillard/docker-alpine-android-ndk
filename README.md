@@ -9,7 +9,7 @@ Get the image:
 docker pull sraillard/alpine-android-ndk:r18
 ```
 
-To compile a project:
+To compile a project: (clean after exit with --rm and bind mount a local path)
 ```
 docker run -rm --mount source=/path/to/ndk/project/,destination=/source,type=bind --workdir=/source sraillard/alpine-android-ndk:r18 ndk-build
 ```
